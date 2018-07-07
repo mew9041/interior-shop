@@ -1,0 +1,39 @@
+@mixin flex-row {
+    display: flex;
+    flex-direction: row;
+}
+
+@mixin flex-column {
+    display: flex;
+    flex-direction: column;
+}
+
+@mixin flex-column-reverse {
+    display: flex;
+    flex-direction: column-reverse;
+}
+
+@mixin flex-align($main-axis, $cross-axis: null) {
+    justify-content: $main-axis;
+
+    @if $cross-axis != null {
+        align-items: $cross-axis;
+    }
+}
+
+@mixin wh($width, $height: null) {
+	@if $height == null {
+		$height: $width;
+	}
+    
+	width: $width;
+	height: $height;
+}
+
+@mixin br($radius) {
+  border-radius: $radius;
+}
+
+@mixin transition($property: all) {
+    transition: $property .3s ease-out .1s;
+}

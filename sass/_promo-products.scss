@@ -1,0 +1,29 @@
+.promo-products {
+
+  &__products {
+    @include flex-row;
+    @include flex-align(space-between, flex-start);
+  }
+
+  &__img {
+    vertical-align: middle;
+  }
+
+  &__product {
+    position: relative;
+    width: 50%;
+  }
+
+  &__content {
+    @include flex-column;
+    @include flex-align(center, flex-start);
+    @include wh(100%);
+    position: absolute;
+    top: 0;
+    padding: 50px;
+
+    .text {
+      max-width: 400px;
+    }
+  }
+}

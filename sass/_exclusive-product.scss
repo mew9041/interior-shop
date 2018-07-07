@@ -1,0 +1,42 @@
+.exclusive-products {
+  padding: 120px 0 90px;
+
+  &__products {
+    @include flex-row;
+    flex-wrap: wrap;
+  }
+
+  &__big-product {
+    position: relative;
+    margin: 0 30px 26px 0;
+  }
+
+  &__big-product-content {
+    @include flex-column;
+    @include flex-align(center, flex-start);
+    @include wh(100%);
+    position: absolute;
+    top: 0;
+    padding: 30px;
+
+    .text {
+      max-width: 380px;
+    }
+  }
+
+  &__products-small-wrap {
+    @include flex-row;
+    @include flex-align(space-between, flex-start);
+    flex-wrap: wrap;
+    max-width: 570px;
+  }
+
+  &__products-small {
+    line-height: 0;
+    margin-bottom: 30px;
+
+    img:hover {
+      outline: 1px solid $grey;
+    }
+  }
+}

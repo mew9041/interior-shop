@@ -1,0 +1,22 @@
+.mobile-app {
+  background: url(../img/back-img.jpg) no-repeat top center;
+  background-size: cover;
+  
+  &__content {
+    padding: 122px 0 116px;
+  }
+
+  .text {
+    font-size: 22px;
+  }
+
+  &__link {
+    @include transition;
+    display: inline-block;
+    margin: 32px 6px 0 0;
+
+    &:hover {
+      opacity: .6;
+    }
+  }
+}

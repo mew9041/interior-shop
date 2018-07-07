@@ -1,0 +1,65 @@
+.internal-head {
+  background-color: $darker-grey;
+  padding: 247px 0 42px;
+
+  &__title {
+    color: $black;
+    font-size: 62px;
+    font-weight: 100;
+    letter-spacing: -2.3px;
+    margin: 0;
+    text-transform: capitalize;
+  }
+}
+
+.contacts {
+
+  &__wrap {
+    @include flex-row;
+    @include flex-align(space-between);
+    margin: 71px 0 122px;
+  }
+
+  &__block {
+    @include flex-column;
+    @include flex-align(center, center);
+    max-width: 368px;
+    border: 1px solid $grey;
+    padding: 45px 45px 62px;
+  }
+
+  &__place {
+    color: $black;
+    font-size: 22px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: -0.9px;
+    margin-top: 28px;
+  }
+
+  &__subtitle {
+    color: $dark-grey;
+    font-size: 14px;
+    font-weight: 700;
+    margin-top: 16px;
+  }
+
+  &__link {
+    @include transition;
+    color: $black;
+    font-size: 14px;
+    font-weight: 700;
+    margin-top: 4px;
+
+    &:hover {
+      color: $grey;
+    }
+  }
+
+  &__text {
+    color: $black;
+    font-size: 14px;
+    font-weight: 300;
+    margin-top: 4px;
+  }
+}

@@ -1,0 +1,125 @@
+.featured-product {
+  padding: 102px 0;
+
+  &__nav {
+    @include flex-row;
+    @include flex-align(space-between, center);
+  }
+  
+  &__links-block {
+    @include flex-row;
+    @include flex-align(space-between, center);
+  }
+
+  &__link {
+    @include transition;
+    font-size: 36px;
+    font-weight: 700;
+    color: $dark-grey;
+    padding: 12px 10px 12px 7px;
+    border-bottom: 1px solid transparent;
+    
+    &:not(.featured-product__link_active):hover {
+      border-bottom: 1px solid $dark-grey;
+    }
+    
+    &_active {
+      color: $black;
+      border-bottom: 3px solid $black;
+    }
+  }
+}
+
+.all-btn {
+  @include transition;
+  font-size: 18px;
+  font-weight: 700;
+  text-transform: uppercase;
+  color: rgba($black, .5);
+  letter-spacing: 3px;
+
+  &__arrow {
+    @include transition;
+    height: 12px;
+    opacity: .5;
+  }
+
+  &:hover {
+    color: $black;
+
+    .all-btn__arrow {
+      opacity: 1;
+    }
+  }
+}
+
+.products-wrap {
+  @include flex-row;
+  @include flex-align(space-between, center);
+  margin-top: 49px;
+}
+
+.products {
+  @include flex-column;
+  position: relative;
+  margin-bottom: 20px;
+
+  &__content {
+    @include flex-column;
+    @include flex-align(center, center);
+    @include wh(100%);
+    @include transition;
+    position: absolute;
+    top: 0;
+    border: 1px solid $grey;
+    background-color: rgba($white, .9);
+    padding: 10px;
+    opacity: 0;
+
+    &:hover {
+      opacity: 1;
+    }
+  }
+
+  &__link {
+    @include flex-column;
+    @include flex-align(center, center);
+    @include wh(50px);
+    @include br(50%);
+    @include transition;
+    background-color: $white;
+    box-shadow: 0 2px 5px rgba($black, .35);
+
+    &:hover {
+
+      .products__arrow {
+        opacity: 1;
+      }
+    }
+
+    &:active {
+      box-shadow: none;
+    }
+  }
+  
+  &__arrow {
+    @include transition;
+    opacity: .5;
+  }
+
+  &__title {
+    font-size: 22px;
+    font-weight: 700;
+    color: $black;
+    text-align: center;
+    margin: 10px 0;
+  }
+
+  &__text {
+    font-size: 14px;
+    font-weight: 300;
+    color: $grey;
+    text-align: center;
+    line-height: 22px;
+  }
+}

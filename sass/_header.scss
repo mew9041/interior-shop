@@ -1,0 +1,191 @@
+.navigation-wrap {
+  @include flex-row;
+  @include flex-align(space-between, center);
+  padding-top: 52px;
+  margin-bottom: -99px;
+  position: relative;
+  z-index: 100;
+}
+
+.navigation {
+  @include flex-row;
+  @include flex-align(flex-start, center);
+  margin-right: 59px;
+
+  &__link {
+    @include transition;
+    padding: 6px 13px;
+    border-bottom: 3px solid transparent;
+    text-transform: uppercase;
+    color: $grey;
+    font-size: 14px;
+    font-weight: 300;
+    letter-spacing: 1.1px;
+
+    &:hover {
+      color: $black;
+      font-weight: 700;
+      border-bottom: 3px solid $black;
+    }
+
+    &:after {
+      display: block;
+      content: attr(title);
+      font-weight: 700;
+      height: 0;
+      overflow: hidden;
+      visibility: hidden;
+    }
+  }
+  
+  &__search {
+    @include transition;
+    padding: 10px;
+
+    &:hover {
+      opacity: .5;
+    }
+  }
+}
+
+.main-slider {
+
+  .slider__slide {
+
+    &_1 {
+      background: url(../img/slider-img.jpg) no-repeat top center;
+    }
+  }
+
+  .slider__content {
+    padding-top: 170px;
+  }
+}
+
+
+.slider {
+  position: relative;
+  
+  &__content {
+    @include flex-column;
+    @include flex-align(center, flex-start);
+    height: 800px;
+  }
+
+  &__nav {
+    @include flex-row;
+    @include flex-align(center, center);
+    position: absolute;
+    bottom: 20px;
+    width: 100%;
+  }
+  
+  &__point-outline {
+    @include flex-column;
+    @include flex-align(center, center);
+    @include br(50%);
+    @include wh(40px);
+    margin: 0 2px;
+    
+    &_active {
+      background-color: $black;
+    }
+  }
+  
+  &__point {
+    @include br(50%);
+    @include wh(30px);
+    @include transition;
+    background-color: rgba($dark-grey, .2);
+
+    &:not(.slider__point_active):hover {
+      background-color: rgba($dark-grey, .5);
+    }
+
+    &_active {
+      background-color: $black;
+    }
+  }
+}
+
+.subtitle {
+  font-size: 18px;
+  font-weight: bold;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  
+  &_green {
+    color: $green;
+  }
+
+  &_blue {
+    color: $blue;
+  }
+
+  &_red {
+    color: $red;
+  }
+
+  &_grey {
+    color: $dark-grey;
+    letter-spacing: 1px;
+  }
+}
+
+.main-title {
+  font-size: 62px;
+  font-weight: 100;
+  text-transform: uppercase;
+  color: $black;
+  margin: 6px 0 10px;
+  letter-spacing: -3px;
+}
+
+.title {
+  font-size: 36px;
+  font-weight: 700;
+  color: $black;
+  margin: 20px 0;
+}
+
+.text {
+  font-size: 14px;
+  font-weight: 300;
+  color: $dark-grey;
+  line-height: 24px;
+  max-width: 500px;
+}
+
+.order-btn {
+  @include transition;
+  @include br(25px);
+  display: block;
+  padding: 13px 32px;
+  background-color: $white;
+  color: rgba($black, .5);
+  font-size: 18px;
+  font-weight: 700;
+  text-transform: uppercase;
+  margin-top: 30px;
+  box-shadow: 0 2px 5px rgba($black, .35);
+  letter-spacing: 3px;
+
+  &__arrow {
+    @include transition;
+    height: 12px;
+    margin-left: 10px;
+    opacity: .5;
+  }
+  
+  &:hover {
+    color: $black;
+
+    .order-btn__arrow {
+      opacity: 1;
+    }
+  }
+
+  &:active {
+    box-shadow: none;
+  }
+}

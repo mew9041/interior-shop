@@ -1,0 +1,36 @@
+.trending-products {
+  padding: 110px 0 55px;
+
+  &__nav {
+    @include flex-row;
+    @include flex-align(space-between, center);
+  }
+
+  &__title {
+    font-size: 36px;
+    font-weight: 700;
+    color: $black;
+    margin: 0;
+    letter-spacing: -1.2px;
+  }
+
+  &__products {
+    @include flex-row;
+    @include flex-align(space-between, flex-start);
+    flex-wrap: wrap;
+    margin: 47px 0;
+  }
+
+  &__product {
+    margin: 15px 0;
+    line-height: 0;
+    
+    img {
+      border: 1px solid transparent;
+      
+      &:hover {
+        border: 1px solid $grey;
+      }
+    }
+  }
+}

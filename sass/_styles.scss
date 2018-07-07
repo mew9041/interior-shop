@@ -1,0 +1,112 @@
+@import url('https://fonts.googleapis.com/css?family=Montserrat:100,100i,200,200i,300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i&subset=cyrillic,cyrillic-ext,latin-ext');
+// font-family: 'Montserrat', sans-serif;
+
+@font-face {
+  font-family: 'Gotham Pro Light';
+  src: url('../fonts/GothamPro-Light.eot');
+  src: url('../fonts/GothamPro-Light.eot?#iefix') format('embedded-opentype'),
+  url('../fonts/GothamPro-Light.woff') format('woff'),
+  url('../fonts/GothamPro-Light.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'icomoon';
+  src: url('../fonts/icomoon.eot?hd4m88');
+  src: url('../fonts/icomoon.eot?hd4m88#iefix') format('embedded-opentype'),
+    url('../fonts/icomoon.ttf?hd4m88') format('truetype'),
+    url('../fonts/icomoon.woff?hd4m88') format('woff'),
+    url('../fonts/icomoon.svg?hd4m88#icomoon') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+
+[class^="icon-"], [class*=" icon-"] {
+  /* use !important to prevent issues with browser extensions that change fonts */
+  font-family: 'icomoon' !important;
+  speak: none;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.icon-location:before {
+  content: "\e947";
+}
+.icon-search:before {
+  content: "\e986";
+}
+.icon-loop2:before {
+  content: "\ea2e";
+}
+.icon-google-plus3:before {
+  content: "\ea8d";
+}
+.icon-pinterest:before {
+  content: "\ead1";
+}
+
+.icon-pinterest {
+  font-size: 30px;
+  color: $dark-grey;
+}
+.icon-location {
+  font-size: 52px;
+  color: $black;
+}
+.icon-loop2 {
+  font-size: 30px;
+  color: $black;
+}
+
+
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 16px;
+}
+
+body {
+  background: $bg-color;
+  font-family: 'Montserrat', sans-serif;
+}
+
+.wrapper {
+  @include flex-column;
+  min-height: 100vh;
+  margin: 0 auto;
+}
+
+.big-container {
+  max-width: $max-width;
+  margin: 0 auto;
+}
+
+.container {
+  max-width: $main-width;
+  margin: 0 auto;
+}
+
+.content {
+  flex: 1;
+}
+
+a {
+  text-decoration: none;
+}
+
+img {
+  max-width: 100%;
+}
